@@ -16,6 +16,9 @@ public class Biblioteca {
     @OneToMany(mappedBy = "biblioteca")
     private List<Livro> livros;
 
+    public Biblioteca(String nome) {
+    }
+
     public Long getId() {
         return id;
     }
@@ -24,20 +27,20 @@ public class Biblioteca {
         this.id = id;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
-
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 
     public List<Livro> getLivros() {

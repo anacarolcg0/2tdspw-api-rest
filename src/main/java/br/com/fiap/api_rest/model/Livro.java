@@ -1,9 +1,8 @@
 package br.com.fiap.api_rest.model;
 
-import java.sql.Date;
-import java.util.List;
-
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Livro {
@@ -16,8 +15,6 @@ public class Livro {
     private int preco;
     private Categoria categoria;
     private String isbn;
-    private boolean ebook;
-    private Date dataLancamento;
     @ManyToOne
     @JoinColumn(name = "id_biblioteca")
     private Biblioteca biblioteca;
@@ -68,22 +65,6 @@ public class Livro {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
-    }
-
-    public boolean isEbook() {
-        return ebook;
-    }
-
-    public void setEbook(boolean ebook) {
-        this.ebook = ebook;
-    }
-
-    public Date getDataLancamento() {
-        return dataLancamento;
-    }
-
-    public void setDataLancamento(Date dataLancamento) {
-        this.dataLancamento = dataLancamento;
     }
 
     public Biblioteca getBiblioteca() {
