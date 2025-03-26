@@ -16,7 +16,11 @@ public class Autor {
             inverseJoinColumns = @JoinColumn(name = "id_autor", referencedColumnName = "id"))
     private List<Livro> livros;
 
+    public Autor() {
+    }
+
     public Autor(String nome) {
+        this.nome = nome;
     }
 
     public Long getId() {
